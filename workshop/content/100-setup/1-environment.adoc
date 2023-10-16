@@ -1,8 +1,8 @@
 == The Workshop Environment You Are Using
 
-Your environment has already been set up and you are ready to deploy your first ROSA cluster.
+Your AWS environment has already been set up. It contains a pre-deployed ROSA cluster which has been configured with Amazon Cognito as the identity provider (idp) for OpenShift user management. 
 
-Your workshop environment consists of several components which have been pre-configured and are ready to use.
+Your workshop environment consists of several other cloud resources which have been pre-configured and are ready to use.
 This includes a %aws_web_console_url%[Amazon Web Services (AWS)] account, and many other supporting resources.
 
 ROSA is enabled on the AWS account used for this lab - and the ROSA CLI as well as AWS CLI tools are installed and configured on your bastion VM.
