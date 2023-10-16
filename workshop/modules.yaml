@@ -46,7 +46,7 @@ modules:
     name: Deploy the Application using OpenShift Gitops
     exit_sign: Continue
   300-apps/lab_13_cicd:
-    name: Automate Deploying the App using OpenShift Pipelines
+    name: (optional) Automate Deploying the App using OpenShift Pipelines
     exit_sign: Exit
   # 400-service-mesh/lab_15_service_mesh_introduction:
   #   name: Introduction to OpenShift Service Mesh
