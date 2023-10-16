@@ -6,15 +6,15 @@ modules:
   100-setup/1-environment:
     name: Environment Setup
     exit_sign: Continue
-  100-setup/2-cluster-creation:
-    name: Deploy a ROSA cluster
-    exit_sign: Continue
+  # 100-setup/2-cluster-creation:
+  #   name: Deploy a ROSA cluster
+  #   exit_sign: Continue
 # 100-setup/2-cluster-creation-hcp:
 #   name: Deploy ROSA cluster (HCP)
 #   exit_sign: Continue
-  100-setup/3-access-cluster:
-    name: Create an Admin User
-    exit_sign: Continue
+  # 100-setup/3-access-cluster:
+  #   name: Create an Admin User
+  #   exit_sign: Continue
   # 200-ops/lab_4_configure_idp:
   #   name: Configure Cluster Authentication Using Amazon Cognito
   #   exit_sign: Continue
