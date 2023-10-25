@@ -1,5 +1,7 @@
-= Building a Modern Application Platform with AWS & ROSA 
+= Workshop System Test 
 
-Welcome to the Building a Modern Application Platform workshop. This page exists to ensure that you can test your system prior to the workshop.
+We look forward to seeing you at the workshop.
+
+If you can see this page you will be able to view the workshop content on this system.
 
 Thank you.
