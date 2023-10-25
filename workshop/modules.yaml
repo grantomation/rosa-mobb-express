@@ -1,11 +1,11 @@
 ---
 modules:
   index:
-    name: Home
-    exit_sign: Continue
-  100-setup/1-environment:
-    name: Environment Setup
-    exit_sign: Continue
+    name: System Test
+    exit_sign: End
+  # 100-setup/1-environment:
+  #   name: Environment Setup
+  #   exit_sign: Continue
   # 100-setup/2-cluster-creation:
   #   name: Deploy a ROSA cluster
   #   exit_sign: Continue
@@ -21,9 +21,9 @@ modules:
   # 200-ops/lab_5_cluster_upgrades:
   #   name: Managing Cluster Upgrades
   #   exit_sign: Continue
-  200-ops/lab_6_managing_worker_nodes:
-    name: Managing Worker Nodes
-    exit_sign: Continue
+  # 200-ops/lab_6_managing_worker_nodes:
+  #   name: Managing Worker Nodes
+  #   exit_sign: Continue
   # 200-ops/lab_7_autoscaling:
   #   name: Cluster Autoscaling
   #   exit_sign: Continue
@@ -33,21 +33,21 @@ modules:
   # 200-ops/lab_9_cloudwatch:
   #   name: Log Forwarding to AWS Cloudwatch
   #   exit_sign: Continue
-  300-apps/lab_10_deploy_app:
-    name: Deploy an Application
-    exit_sign: Continue
+  # 300-apps/lab_10_deploy_app:
+  #   name: Deploy an Application
+  #   exit_sign: Continue
   # 300-apps/lab_14_resilient_app:
   #   name: Making your Application Resilient
   #   exit_sign: Continue
-  300-apps/lab_12_network_policy:
-    name: Securing the application using NetworkPolicies
-    exit_sign: Continue
-  300-apps/lab_11_openshift_gitops:
-    name: Deploy the Application using OpenShift Gitops
-    exit_sign: Continue
-  300-apps/lab_13_cicd:
-    name: (optional) Automate Deploying the App using OpenShift Pipelines
-    exit_sign: Exit
+  # 300-apps/lab_12_network_policy:
+  #   name: Securing the application using NetworkPolicies
+  #   exit_sign: Continue
+  # 300-apps/lab_11_openshift_gitops:
+  #   name: Deploy the Application using OpenShift Gitops
+  #   exit_sign: Continue
+  # 300-apps/lab_13_cicd:
+  #   name: (optional) Automate Deploying the App using OpenShift Pipelines
+  #   exit_sign: Exit
   # 400-service-mesh/lab_15_service_mesh_introduction:
   #   name: Introduction to OpenShift Service Mesh
   #   exit_sign: Continue

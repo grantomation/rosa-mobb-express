@@ -1,17 +1,5 @@
 = Building a Modern Application Platform with AWS & ROSA 
 
-Welcome to the Building a Modern Application Platform workshop. In this workshop you will learn the building blocks of modern application platform and leverage Amazon Web Services (AWS) and Red Hat OpenShift Service on AWS (ROSA) to build a modern application platform. 
+Welcome to the Building a Modern Application Platform workshop. This page exists to ensure that you can test your system prior to the workshop.
 
-*Who this workshop is for:* This workshop is aimed at Platform Engineers, DevOps Engineers, Cloud Operations, Architects, and Developers that want to learn what makes a modern application platform, and how they can leverage cloud services to streamline the delivery and operations of their application platforms.
-
-*What to expect:* During the workshop, we will take you through a series of hands on exercises to help you understand some of the concepts of modern application platforms. Attendees will gain experience with;
-
-- Managing a ROSA application platform using the ROSA command line tool to scale compute resources on their application platform. Additionally they will develop an understanding of the advantages of the ROSA cli when providing high availability for workloads, provisioning pools of machines with different AWS instance types and integrating with the cluster autoscaler. 
-
-- Deploy an application that integrates with AWS native features such as, IAM Roles for Service Accounts and AWS STS to connect to an Amazon DynamoDB table.
-
-- Secure an application using NetworkPolicy, securing communications between pods hosted on a ROSA application platform by isolating and segmenting different components within the cluster using fine-grained network access control based on criteria such as IP addresses, ports and pod selectors.
-
-- Deploy an application using CI/CD tooling, including OpenShift GitOps and Source-to-Image.
-
-After completing this workshop, attendees will understand the concepts of modern application platforms, and will have begun to lay the foundations in their provided AWS infrastructure.
+Thank you.
