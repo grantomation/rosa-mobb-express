@@ -5,7 +5,7 @@ Your AWS environment has already been set up. It contains a pre-deployed ROSA cl
 Your workshop environment consists of several other cloud resources which have been pre-configured and are ready to use.
 This includes a %aws_web_console_url%[Amazon Web Services (AWS)] account, and many other supporting resources.
 
-ROSA is enabled on the AWS account used for this lab - and the ROSA CLI as well as AWS CLI tools are installed and configured on your bastion VM.
+ROSA is enabled on the AWS account used for this lab, and the ROSA CLI as well as AWS CLI tools are installed and configured on your bastion VM.
 
 == Connect to your bastion VM
 
@@ -142,9 +142,13 @@ OCM Organization ID:          1z8aXAQ73DYAPLeCZhNq1MRQ0ZL
 OCM Organization Name:        Red Hat, Inc.
 ----
 
-=== Verify quota
 
-. Verify that your AWS account has enough quota in the region you will be deploying your cluster to.
+=== Using the ROSA Command Line
+
+The ROSA command line utility provides tooling to view and interact with Red Hat OpenShift Service on AWS (ROSA). The ROSA CLI will allow administrators to perform some common tasks quickly.
+
+
+. For example, using the ROSA CLI, you can verify that your AWS account has enough quota in the region you will be deploying your cluster to.
 +
 [source,sh,role=execute]
 ----
@@ -159,6 +163,45 @@ I: AWS quota ok. If cluster installation fails, validate actual AWS resource usa
 rosa/rosa_getting_started/rosa-required-aws-service-quotas.html
 ----
 +
+. Let's use the ROSA CLI to view details about our ROSA deployment. First let's list the clusters we have
++
+[source,sh,role=execute]
+----
+rosa verify quota
+----
++
+.Sample Output
+[source,texinfo,options=nowrap]
+----
+ID                                NAME        STATE  TOPOLOGY
+2740pit37ia213l9iu7g8ha0rjtpujda  rosa-4mg7f  ready  Classic (STS)
+----
++
 See https://docs.openshift.com/rosa/rosa_planning/rosa-sts-required-aws-service-quotas.html[the documentation] for more details regarding quotas.
++
+. Now we will collect the details to connect to the cluster. We will query the ROSA cluster to gather the Web console URL and the path of the API endpoint. We will also write these details to the .bashrc so they are loaded into our environment variables and easily accessed via the command line.
++
+[source,sh,role=execute]
+----
+export API=$(rosa describe cluster -c rosa-${GUID} -o json | jq -r .api.url)
+echo "export API=$(rosa describe cluster -c rosa-${GUID} -o json | jq -r .api.url)" >> ~/.bashrc
 
-We have now successfully set up our account and environment and are ready to deploy our cluster.
+
+export CONSOLE_URL=$(rosa describe cluster -c rosa-${GUID} -o json | jq -r .console.url)
+echo "export CONSOLE_URL=$(rosa describe cluster -c rosa-${GUID} -o json | jq -r .console.url)" >> ~/.bashrc
+
+source ~/.bashrc
+
+printf "ROSA API: $API\n\nROSA Web Console: $CONSOLE_URL"
+----
++
+.Sample Output
+[source,texinfo,options=nowrap]
+----
+ROSA API: https://api.rosa-4mg7f.m0rb.p1.openshiftapps.com:6443
+
+ROSA Web Console: https://console-openshift-console.apps.rosa-4mg7f.m0rb.p1.openshiftapps.com
+----
++
+
+We have used the ROSA CLI to query our cluster. We are now ready to login to ROSA and deploy an application.
